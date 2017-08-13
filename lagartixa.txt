@@ -1,0 +1,242 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<window
+    id="Lagartixa"
+    title="Lagartixa - Gerador de LSP"
+    xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul" >  
+    <script type="application/x-javascript" src="lagartixa.js"/>    
+    <grid>
+    <columns>
+       <column>
+       <image src='lagartixa.jpg' width='220' height='80'/>
+       </column>    
+       <column>
+       <label class="header"  value="LAGARTIXA - Gerador de Linguagem Senior de Programação (LSP)" /> 
+       </column>
+    </columns>
+    </grid>
+    <label class="header"  value="--------------------------------------------------------------------------------------------------------------------------------------------------------------------------" /> 
+
+<!--    <splitter /> -->
+    
+    <grid>
+    <columns>   
+    <column>
+       <label control="Table1" value="Tabela:"/>
+       <label control="Field0" value="Campo:"/>
+       <label control="Field1" value="Campo:"/>
+    </column>
+
+    <column>
+        <textbox id="Table1" label="Tabela1" />    
+        <textbox id="Field0"  label="Campo0" />
+        <textbox id="Field1"  label="Campo1" />
+    </column>  
+    
+    <column>
+	<radiogroup id="radioTabela" >
+	</radiogroup>
+
+	<radiogroup id="radio0" >
+	  <grid>
+	  <columns>
+	  <column>
+	  <radio label="Alfa" selected="true"/>
+	  </column>
+	  <column>
+	  <radio label="Data" />
+	  </column>
+	  <column>
+	  <radio label="Numero" />
+	  </column>
+	  </columns>
+	  </grid>
+	</radiogroup>
+	
+	<radiogroup id="radio1" >
+	  <grid>
+	  <columns>
+	  <column>
+	  <radio label="Alfa" selected="true" />
+	  </column>
+	  <column>
+	  <radio label="Data" />
+	  </column>
+	  <column>
+	  <radio label="Numero" />
+	  </column>
+	  </columns>
+	  </grid>
+	</radiogroup>
+		
+    </column>
+
+    <column>
+       <label/>
+       <label control="Field2" value="Campo:"/>
+       <label control="Field3" value="Campo:"/>
+    </column>
+    
+
+    <column>
+        <label/>
+        <textbox id="Field2"  label="Campo2" />
+        <textbox id="Field3"  label="Campo3" />
+    </column>
+
+    <column>
+	<radiogroup >
+	</radiogroup>
+
+	<radiogroup id="radio2" >
+	  <grid>
+	  <columns>
+	  <column>
+	  <radio label="Alfa" selected="true" />
+	  </column>
+	  <column>
+	  <radio label="Data" />
+	  </column>
+	  <column>
+	  <radio label="Numero" />
+	  </column>
+	  </columns>
+	  </grid>
+	</radiogroup>
+	
+	<radiogroup id="radio3" >
+	  <grid>
+	  <columns>
+	  <column>
+	  <radio label="Alfa" selected="true"/>
+	  </column>
+	  <column>
+	  <radio label="Data" />
+	  </column>
+	  <column>
+	  <radio label="Numero" />
+	  </column>
+	  </columns>
+	  </grid>
+	</radiogroup>
+    </column>
+    </columns>
+    
+    </grid>
+         
+    <label class="header"  value="------ Campos para clausula WHERE --------------------------------------------------------------------------------------------------------------------------------" /> 
+    
+    <grid>
+    <columns>   
+    <column>
+       <label control="Where0" value="Campo:"/>
+       <label control="Where1" value="Campo:"/>
+    </column>
+
+    <column>
+        <textbox id="Where0"  label="Campo0" />
+        <textbox id="Where1"  label="Campo1" />
+    </column>  
+    
+    <column>
+    
+	<radiogroup id="radioWhere0" >
+	  <grid>
+	  <columns>
+	  <column>
+	  <radio label="Alfa" selected="true" />
+	  </column>
+	  <column>
+	  <radio label="Data" />
+	  </column>
+	  <column>
+	  <radio label="Numero" />
+	  </column>
+	  </columns>
+	  </grid>
+	</radiogroup>
+	
+	<radiogroup id="radioWhere1" >
+	  <grid>
+	  <columns>
+	  <column>
+	  <radio label="Alfa" selected="true" />
+	  </column>
+	  <column>
+	  <radio label="Data" />
+	  </column>
+	  <column>
+	  <radio label="Numero" />
+	  </column>
+	  </columns>
+	  </grid>
+	</radiogroup>
+    </column>
+
+    <column>
+       <label control="Where2" value="Campo:"/>
+       <label control="Where3" value="Campo:"/>
+    </column>
+    
+    <column>
+        <textbox id="Where2"  label="Where2" />
+        <textbox id="Where3"  label="Where3" />
+    </column>
+
+    <column>
+
+	<radiogroup id="radioWhere2" >
+	  <grid>
+	  <columns>
+	  <column>
+	  <radio label="Alfa" selected="true" />
+	  </column>
+	  <column>
+	  <radio label="Data" />
+	  </column>
+	  <column>
+	  <radio label="Numero" />
+	  </column>
+	  </columns>
+	  </grid>
+	</radiogroup>
+	
+	<radiogroup id="radioWhere3" >
+	  <grid>
+	  <columns>
+	  <column>
+	  <radio label="Alfa" selected="true" />
+	  </column>
+	  <column>
+	  <radio label="Data" />
+	  </column>
+	  <column>
+	  <radio label="Numero" />
+	  </column>
+	  </columns>
+	  </grid>
+	</radiogroup>
+    </column>
+    </columns>
+
+    </grid>    
+
+    <grid>
+    <columns>
+       <column>
+       <button value="teste" label="Executar" oncommand="CreateCursor();" />
+       </column>
+    </columns>
+    </grid>
+
+
+
+<!--    <splitter id="splitter" />  -->
+
+    
+    
+    <textbox id="sourceLSP" Label="Fonte LSP:" rows="20" multiline="true" value="O lagartixa é um gerador de código LSP de programação!" />
+    
+    
+    
+</window>
